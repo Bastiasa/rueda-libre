@@ -1,0 +1,35 @@
+19 oct 2026
+- Petición 1: 
+    - URL: http://127.0.0.1:5500/index.html
+    - Protocolo: http
+    - Host: 127.0.0.1
+    - Puerto: 5500
+    - Ruta: /index.html
+    - Método: GET
+    - Código de estado: 200 (OK)
+
+- Petición 2: 
+    - URL: http://localhost:5500/promociones.html
+    - Código: 404 (El recurso no existe)
+
+¿Para qué servirá HTML?
+
+Para definir la estructura de la página web. Ej:
+
+<h1>Rueda libre</h1>
+
+¿Para qué servirá CSS?
+
+Para darle estilo a los diferentes elementos del sitio web. Ej:
+
+h1 {
+    font-size: 32px;
+}
+
+¿Para qué servirá JavaScript?
+
+Para darle funcionalidades extra al sitio web. Ej:
+
+const title = document.querySelector("h1");
+title.addEventListener("mouseenter", () => title.style.scale = "1.1");
+title.addEventListener("mouseleave", () => title.style.scale = "1");
