@@ -48,17 +48,37 @@
 
                         <p>
                             <label for="nombre">Tu nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" />
+                            <input
+                                required
+                                minlength="3"
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                            />
                         </p>
 
                         <p>
                             <label for="correo">Tu correo electrónico</label>
-                            <input type="email" id="correo" name="correo" />
+                            <input
+                                required
+                                type="email"
+                                id="correo"
+                                name="correo"
+                            />
                         </p>
 
                         <p>
                             <label for="celular">Tu número de celular</label>
-                            <input type="number" id="celular" name="celular" />
+                            <input
+                                required
+                                pattern="^3\d*$"
+                                minlength="10"
+                                maxlength="10"
+                                title="El número debe empezar con un 3 y solo deben ser números"
+                                type="text"
+                                id="celular"
+                                name="celular"
+                            />
                         </p>
 
                         <p>
@@ -66,7 +86,11 @@
                                 >Tu número de documento</label
                             >
                             <input
-                                type="number"
+                                title="Solo debe escribir números"
+                                minlength="6"
+                                maxlength="10"
+                                pattern="\d*"
+                                type="text"
                                 id="documento"
                                 name="documento"
                             />
@@ -81,9 +105,12 @@
                                 >Fecha de tu alquiler</label
                             >
                             <input
+                                required
                                 type="date"
                                 name="fechaAlquiler"
                                 id="fechaAlquiler"
+                                min="2026-11-01"
+                                max="2026-12-31"
                             />
                         </p>
 
@@ -92,7 +119,11 @@
                                 Tipo de bicicleta
                             </label>
 
-                            <select name="tipoBicicleta" id="tipoBicicleta">
+                            <select
+                                required
+                                name="tipoBicicleta"
+                                id="tipoBicicleta"
+                            >
                                 <option value="Urbana">Urbana</option>
                                 <option value="Montaña">Montaña</option>
                                 <option value="Eléctrica">Eléctrica</option>
@@ -102,7 +133,7 @@
                         <p>
                             <label for="plan"> Plan </label>
 
-                            <select name="plan" id="plan">
+                            <select required name="plan" id="plan">
                                 <option value="1 hora">1 hora</option>
                                 <option value="Medio día">Medio día</option>
                                 <option value="Día completo">
@@ -135,6 +166,9 @@
                                 Cantidad de bicicletas
                             </label>
                             <input
+                                required
+                                min="1"
+                                max="6"
                                 type="number"
                                 name="cantidadBicis"
                                 id="cantidadBicis"
@@ -145,6 +179,7 @@
                             <label for="comentarios">Comentarios extra</label>
 
                             <textarea
+                                maxlength="300"
                                 name="comentarios"
                                 id="comentarios"
                             ></textarea>
@@ -159,6 +194,7 @@
                                 >¿Acepta las políticas del alquiler?</label
                             >
                             <input
+                                required
                                 type="checkbox"
                                 name="politicas"
                                 id="politicas"

@@ -40,4 +40,51 @@ Justificación de uso de los controladores:
 
 Para el nombre usé un controlador tipo 'text' porque considero que es un texto plano.
 Para la fecha del alquiler usé tipo 'date' para que el cliente pueda seleccionar una fecha.
-Para el tipo de bicicleta usé una etiqueta 'select' porque el cliente debe elegir entre las diferentes opciones predefinidas. 
+Para el tipo de bicicleta usé una etiqueta 'select' porque el cliente debe elegir entre las diferentes opciones predefinidas.
+
+Pruebas de de cada regla
+
+Campo: nombre
+Dato de prueba: ab
+Resultado esperado: Se requiere mínimo un valor de 3 caracteres.
+Resultado obtenido: Se requiere mínimo un valor de 3 caracteres.
+
+Campo: email
+Dato de prueba: holamundo@gmail.com
+Resultado esperado: Recibido
+Resultado obtenido: Recibido
+
+Campo: celular
+Dato de prueba: 1234567890
+Resultado esperado: Formato no cumple el patrón esperado.
+Resultado obtenido: Formato no cumple el patrón esperado.
+
+Campo: documento
+Dato de prueba: 1234
+Resultado esperado: Se requiere mínimo un valor de 6 caracteres.
+Resultado obtenido: Se requiere mínimo un valor de 6 caracteres.
+
+Campo: Fecha del alquiler
+Dato de prueba: 2026-10-31
+Resultado esperado: No es permitido.
+Resultado obtenido: No es permitido.
+
+Campo: Cantidad de bicicletas
+Dato de prueba: 1
+Resultado esperado: Recibido.
+Resultado obtenido: Recibido.
+
+Campo: Políticas del alquiler
+Dato de prueba: false
+Resultado esperado: Dato inválido.
+Resultado obtenido: Dato inválido
+
+Campo: Tipo de bicicleta
+Dato de prueba: Urbana
+Resultado esperado: Recibido
+Resultado obtenido: Recibido
+
+Campo: Plan
+Dato de prueba: 1 hora
+Resultado esperado: Recibido.
+Resultado obtenido: Recibido.
