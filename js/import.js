@@ -27,6 +27,10 @@ async function importarElementos(contenedor = document) {
     );
 }
 
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("html").style.scrollBehavior = "smooth"
     importarElementos();
 });

@@ -1,0 +1,83 @@
+/*
+
+Verde Ruta
+	
+
+#1E7A4F
+	
+
+Botones y enlaces
+
+Naranja Pedal
+	
+
+#F39A2B
+	
+
+Destacados y botones secundarios
+
+Azul Noche
+	
+
+#14213D
+	
+
+Títulos y encabezado
+
+Crema
+	
+
+#FAF6EF
+	
+
+Fondo general
+
+Gris Asfalto
+	
+
+#5B6470
+	
+
+Texto secundario
+
+*/
+
+:root {
+    --url-color: #1e7a4f;
+    --highlight-color: #f39a2b;
+    --title-color: #14213d;
+    --background-color: #faf6ef;
+    --secondary-text-color: Texto secundario;
+
+    --title-font: "Montserrat";
+    --title-weight: 700;
+
+    --text-font: "Open Sans";
+    --text-weight: 500;
+
+    --spacing-sm: 0.25rem;
+    --spacing-md: 0.5rem;
+    --spacing-lg: 1rem;
+}
+
+html {
+    font-family: var(--text-font);
+    font-weight: var(--text-weight);
+
+    background-color: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    font-weight: var(--text-weight);
+    color: var(--title-color);
+}
+
+a {
+    color: var(--url-color);
+}
