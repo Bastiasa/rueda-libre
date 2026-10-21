@@ -60,6 +60,23 @@ Texto secundario
     --spacing-lg: 1rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 48rem;
+    margin-inline: auto;
+}
+
+img {
+    width: 100%;
+}
+
+#cover-image {
+    height: 100vh;
+}
+
 html {
     font-family: var(--text-font);
     font-weight: var(--text-weight);
@@ -96,6 +113,7 @@ a {
 }
 
 .btn-action-call {
+    padding: var(--spacing-md);
     background-color: var(--url-color);
     color: var(--background-color);
 }
@@ -114,4 +132,45 @@ input:focus,
 textarea:focus,
 select:focus {
     background-color: var(--highlight-color);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+.service-card {
+    display: inline-block;
+    margin: var(--spacing-lg);
+    border: 1px solid var(--highlight-color);
+    background-color: var(--url-color);
+    color: var(--background-color);
+    border-radius: var(--spacing-sm);
+}
+
+.service-card > :not(img) {
+    padding-inline: var(--spacing-md);
+}
+
+.service-card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: var(--title-color);
+    color: var(--background-color);
+}
+
+table caption {
+    color: var(--title-color);
+}
+
+table th,
+table td {
+    padding: var(--spacing-sm);
 }

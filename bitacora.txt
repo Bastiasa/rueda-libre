@@ -102,3 +102,7 @@ La razón: el selector '#menu a' es más específico que la clase. Para solucion
 2. Cambiar '#menu a { color: var(--gris-asfalto); }' por '#menu a { color: var(--verde-ruta); font-weight: 600;}' y eliminar '.activo { color: var(--verde-ruta); font-weight: 600; }'.
 
 Yo elegí la segunda opción.
+
+...
+
+El ancho total de una tarjeta antes ocupaba todo el ancho disponible. Ahora, con 'display: inline-block;' el ancho es del contenido.
