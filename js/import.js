@@ -17,20 +17,39 @@ async function importarElementos(contenedor = document) {
                 elemento.innerHTML = html;
                 elemento.removeAttribute("imports");
 
+                // Corregir las rutas relativas del HTML importado
+                const urlBase = new URL(ruta, document.baseURI);
+
+                elemento
+                    .querySelectorAll("[href], [src]")
+                    .forEach((etiqueta) => {
+                        for (const atributo of ["href", "src"]) {
+                            if (!etiqueta.hasAttribute(atributo)) continue;
+
+                            const valor = etiqueta.getAttribute(atributo);
+
+                            // No modificar rutas absolutas ni enlaces especiales
+                            if (/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(valor)) {
+                                continue;
+                            }
+
+                            etiqueta.setAttribute(
+                                atributo,
+                                new URL(valor, urlBase).href,
+                            );
+                        }
+                    });
+
                 // Importar también los elementos anidados
                 await importarElementos(elemento);
-
             } catch (error) {
                 console.error(`Error al importar "${ruta}":`, error);
             }
-        })
+        }),
     );
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("html").style.scrollBehavior = "smooth"
+    document.documentElement.style.scrollBehavior = "smooth";
     importarElementos();
 });
