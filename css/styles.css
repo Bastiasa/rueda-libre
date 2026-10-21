@@ -47,7 +47,7 @@ Texto secundario
     --highlight-color: #f39a2b;
     --title-color: #14213d;
     --background-color: #faf6ef;
-    --secondary-text-color: Texto secundario;
+    --secondary-text-color: #5b6470;
 
     --title-font: "Montserrat";
     --title-weight: 700;
@@ -80,4 +80,38 @@ h6 {
 
 a {
     color: var(--url-color);
+}
+
+#menu a {
+    color: var(--url-color);
+    font-weight: 600;
+}
+
+#menu a:hover {
+    color: var(--highlight-color);
+}
+
+#menu a:focus {
+    color: var(--secondary-text-color);
+}
+
+.btn-action-call {
+    background-color: var(--url-color);
+    color: var(--background-color);
+}
+
+.btn-action-call:hover {
+    background-color: var(--highlight-color);
+    color: var(--secondary-text-color);
+}
+
+.btn-action-call:focus {
+    background-color: var(--highlight-color);
+    border: 2px solid var(--secondary-text-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: var(--highlight-color);
 }

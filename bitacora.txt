@@ -88,3 +88,17 @@ Campo: Plan
 Dato de prueba: 1 hora
 Resultado esperado: Recibido.
 Resultado obtenido: Recibido.
+
+21 oct 2026
+
+Revisé por qué no se aplican los cambios de mi compañero:
+
+#menu a { color: var(--gris-asfalto); }
+.activo { color: var(--verde-ruta); font-weight: 600; }
+
+La razón: el selector '#menu a' es más específico que la clase. Para solucionarlo hay dos opciones:
+
+1. Eliminar '#menu a { color: var(--gris-asfalto); }'
+2. Cambiar '#menu a { color: var(--gris-asfalto); }' por '#menu a { color: var(--verde-ruta); font-weight: 600;}' y eliminar '.activo { color: var(--verde-ruta); font-weight: 600; }'.
+
+Yo elegí la segunda opción.
