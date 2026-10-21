@@ -38,6 +38,137 @@
                     <li>donimgo: servisio de 3:00 a.m. a 3:01 a.m.</li>
                 </ul>
             </section>
+
+            <section>
+                <h2>Formulario de reserva</h2>
+
+                <form method="post">
+                    <fieldset>
+                        <legend>Tus datos</legend>
+
+                        <p>
+                            <label for="nombre">Tu nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" />
+                        </p>
+
+                        <p>
+                            <label for="correo">Tu correo electrónico</label>
+                            <input type="email" id="correo" name="correo" />
+                        </p>
+
+                        <p>
+                            <label for="celular">Tu número de celular</label>
+                            <input type="number" id="celular" name="celular" />
+                        </p>
+
+                        <p>
+                            <label for="documento"
+                                >Tu número de documento</label
+                            >
+                            <input
+                                type="number"
+                                id="documento"
+                                name="documento"
+                            />
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tu alquiler</legend>
+
+                        <p>
+                            <label for="fechaAlquiler"
+                                >Fecha de tu alquiler</label
+                            >
+                            <input
+                                type="date"
+                                name="fechaAlquiler"
+                                id="fechaAlquiler"
+                            />
+                        </p>
+
+                        <p>
+                            <label for="tipoBicicleta">
+                                Tipo de bicicleta
+                            </label>
+
+                            <select name="tipoBicicleta" id="tipoBicicleta">
+                                <option value="Urbana">Urbana</option>
+                                <option value="Montaña">Montaña</option>
+                                <option value="Eléctrica">Eléctrica</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="plan"> Plan </label>
+
+                            <select name="plan" id="plan">
+                                <option value="1 hora">1 hora</option>
+                                <option value="Medio día">Medio día</option>
+                                <option value="Día completo">
+                                    Día completo
+                                </option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="recorridoGuiado">
+                                Recorrido guiado
+                            </label>
+
+                            <select name="recorridoGuiado" id="recorridoGuiado">
+                                <option value="Ninguno">Ninguno</option>
+                                <option value="Río y parques">
+                                    Río y parques
+                                </option>
+                                <option value="Sabores de Barrio">
+                                    Sabores de Barrio
+                                </option>
+                                <option value="Reto La palma">
+                                    Reto La palma
+                                </option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="cantidadBicis">
+                                Cantidad de bicicletas
+                            </label>
+                            <input
+                                type="number"
+                                name="cantidadBicis"
+                                id="cantidadBicis"
+                            />
+                        </p>
+
+                        <p>
+                            <label for="comentarios">Comentarios extra</label>
+
+                            <textarea
+                                name="comentarios"
+                                id="comentarios"
+                            ></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmación</legend>
+
+                        <p>
+                            <label for="politicas"
+                                >¿Acepta las políticas del alquiler?</label
+                            >
+                            <input
+                                type="checkbox"
+                                name="politicas"
+                                id="politicas"
+                            />
+                        </p>
+                    </fieldset>
+
+                    <button type="submit">Enviar formulario</button>
+                </form>
+            </section>
         </main>
     </body>
 </html>

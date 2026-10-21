@@ -33,3 +33,11 @@ Para darle funcionalidades extra al sitio web. Ej:
 const title = document.querySelector("h1");
 title.addEventListener("mouseenter", () => title.style.scale = "1.1");
 title.addEventListener("mouseleave", () => title.style.scale = "1");
+
+20 de octubre
+
+Justificación de uso de los controladores:
+
+Para el nombre usé un controlador tipo 'text' porque considero que es un texto plano.
+Para la fecha del alquiler usé tipo 'date' para que el cliente pueda seleccionar una fecha.
+Para el tipo de bicicleta usé una etiqueta 'select' porque el cliente debe elegir entre las diferentes opciones predefinidas. 
