@@ -106,3 +106,8 @@ Yo elegí la segunda opción.
 ...
 
 El ancho total de una tarjeta antes ocupaba todo el ancho disponible. Ahora, con 'display: inline-block;' el ancho es del contenido.
+
+
+25 oct 2026
+
+Cuando estrecho la página, los links del menu del header se reacomodan.

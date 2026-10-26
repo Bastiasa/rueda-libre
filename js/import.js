@@ -1,8 +1,8 @@
 async function importarElementos(contenedor = document) {
-    const elementos = contenedor.querySelectorAll("[imports]");
+    const elementos = Array.from(contenedor.querySelectorAll("[imports]"));
 
     await Promise.all(
-        Array.from(elementos).map(async (elemento) => {
+        elementos.map(async (elemento) => {
             const ruta = elemento.getAttribute("imports");
 
             try {
@@ -14,13 +14,14 @@ async function importarElementos(contenedor = document) {
 
                 const html = await respuesta.text();
 
-                elemento.innerHTML = html;
-                elemento.removeAttribute("imports");
+                // Crear un contenedor temporal para analizar el HTML
+                const temporal = document.createElement("template");
+                temporal.innerHTML = html;
 
                 // Corregir las rutas relativas del HTML importado
                 const urlBase = new URL(ruta, document.baseURI);
 
-                elemento
+                temporal.content
                     .querySelectorAll("[href], [src]")
                     .forEach((etiqueta) => {
                         for (const atributo of ["href", "src"]) {
@@ -40,13 +41,22 @@ async function importarElementos(contenedor = document) {
                         }
                     });
 
-                // Importar también los elementos anidados
-                await importarElementos(elemento);
+                // Insertar los hijos importados en la posición del contenedor
+                const fragmento = temporal.content;
+
+                elemento.replaceWith(fragmento);
             } catch (error) {
                 console.error(`Error al importar "${ruta}":`, error);
             }
         }),
     );
+
+    // Importar también los elementos anidados recién insertados
+    const pendientes = contenedor.querySelectorAll("[imports]");
+
+    if (pendientes.length > 0) {
+        await importarElementos(contenedor);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
