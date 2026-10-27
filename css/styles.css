@@ -247,3 +247,37 @@ select {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
+
+#nuestra-flota {
+    gap: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+}
+
+#nuestra-flota .card {
+    display: flex;
+    flex-direction: column;
+}
+
+#nuestra-flota .price {
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    border: 1px solid calc(var(--url-color) * 0.5);
+    background-color: var(--highlight-color);
+    padding-right: var(--spacing-sm);
+    margin-right: auto;
+}
+
+#nuestra-flota .price::before {
+    content: "Precio por hora";
+    border-right: 1px solid calc(var(--url-color) * 0.5);
+    margin-right: var(--spacing-sm);
+    padding: var(--spacing-sm);
+
+    background-color: var(--url-color);
+    color: white;
+}
+
+#nuestra-flota .card .buy {
+    margin-top: auto;
+}
