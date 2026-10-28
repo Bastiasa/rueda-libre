@@ -108,11 +108,11 @@ Yo elegí la segunda opción.
 El ancho total de una tarjeta antes ocupaba todo el ancho disponible. Ahora, con 'display: inline-block;' el ancho es del contenido.
 
 
-25 oct 2026
+26 oct 2026
 
 Cuando estrecho la página, los links del menu del header se reacomodan.
 
-26 oct 2026
+27 oct 2026
 
 A 1280px se ven 4 columnas por fila.
 A 900px se ven 4 columnas por fila.

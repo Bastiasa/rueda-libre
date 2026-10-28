@@ -67,7 +67,7 @@ Texto secundario
 }
 
 main {
-    max-width: 48rem;
+    max-width: 64rem;
     margin-inline: auto;
 }
 
@@ -280,4 +280,53 @@ select {
 
 #nuestra-flota .card .buy {
     margin-top: auto;
+}
+
+.centered-flexbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero {
+    background-color: var(--highlight-color);
+    padding: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+
+    min-height: 100vh;
+}
+
+#cover-image {
+    object-fit: contain;
+}
+
+#rutas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+#rutas .ruta {
+    border: 1px solid var(--url-color);
+    border-radius: var(--spacing-md);
+    overflow: hidden;
+}
+
+#rutas .ruta .info {
+    padding: var(--spacing-sm);
+}
+
+#rutas .ruta img {
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+}
+
+#reservas-inicio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
 }

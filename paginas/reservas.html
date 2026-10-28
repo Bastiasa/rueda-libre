@@ -21,201 +21,213 @@
         <div imports="../use/ws-button.htm"></div>
 
         <main>
-            <section>
-                <h1>Reserva ti Bicicleta ya mimo</h1>
+            <div id="reservas-inicio">
+                <section>
+                    <h2>Formulario de reserva</h2>
 
-                <p>
-                    Escríbenos a
-                    <a href="mailto:correosupercool@example.com">este correo</a
-                    >.
-                </p>
+                    <form method="post">
+                        <fieldset>
+                            <legend>Tus datos</legend>
 
-                <h2>Horario</h2>
+                            <p>
+                                <label for="nombre">Tu nombre completo</label>
+                                <input
+                                    required
+                                    minlength="3"
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                />
+                            </p>
 
-                <ul>
-                    <li>Lune: no ai serbisio</li>
+                            <p>
+                                <label for="correo"
+                                    >Tu correo electrónico</label
+                                >
+                                <input
+                                    required
+                                    type="email"
+                                    id="correo"
+                                    name="correo"
+                                />
+                            </p>
 
-                    <li>Marte: no ai serbisio</li>
+                            <p>
+                                <label for="celular"
+                                    >Tu número de celular</label
+                                >
+                                <input
+                                    required
+                                    pattern="^3\d*$"
+                                    minlength="10"
+                                    maxlength="10"
+                                    title="El número debe empezar con un 3 y solo deben ser números"
+                                    type="text"
+                                    id="celular"
+                                    name="celular"
+                                />
+                            </p>
 
-                    <li>Miercole: no ai serbisio</li>
+                            <p>
+                                <label for="documento"
+                                    >Tu número de documento</label
+                                >
+                                <input
+                                    title="Solo debe escribir números"
+                                    minlength="6"
+                                    maxlength="10"
+                                    pattern="\d*"
+                                    type="text"
+                                    id="documento"
+                                    name="documento"
+                                />
+                            </p>
+                        </fieldset>
 
-                    <li>Jueve: no ai serbisio</li>
+                        <fieldset>
+                            <legend>Tu alquiler</legend>
 
-                    <li>Vielne: no ai serbisio</li>
+                            <p>
+                                <label for="fechaAlquiler"
+                                    >Fecha de tu alquiler</label
+                                >
+                                <input
+                                    required
+                                    type="date"
+                                    name="fechaAlquiler"
+                                    id="fechaAlquiler"
+                                    min="2026-11-01"
+                                    max="2026-12-31"
+                                />
+                            </p>
 
-                    <li>savados: no ai serbisio</li>
+                            <p>
+                                <label for="tipoBicicleta">
+                                    Tipo de bicicleta
+                                </label>
 
-                    <li>donimgo: servisio de 3:00 a.m. a 3:01 a.m.</li>
-                </ul>
-            </section>
+                                <select
+                                    required
+                                    name="tipoBicicleta"
+                                    id="tipoBicicleta"
+                                >
+                                    <option value="Urbana">Urbana</option>
+                                    <option value="Montaña">Montaña</option>
+                                    <option value="Eléctrica">Eléctrica</option>
+                                </select>
+                            </p>
 
-            <section>
-                <h2>Formulario de reserva</h2>
+                            <p>
+                                <label for="plan"> Plan </label>
 
-                <form method="post">
-                    <fieldset>
-                        <legend>Tus datos</legend>
+                                <select required name="plan" id="plan">
+                                    <option value="1 hora">1 hora</option>
+                                    <option value="Medio día">Medio día</option>
+                                    <option value="Día completo">
+                                        Día completo
+                                    </option>
+                                </select>
+                            </p>
 
-                        <p>
-                            <label for="nombre">Tu nombre completo</label>
-                            <input
-                                required
-                                minlength="3"
-                                type="text"
-                                id="nombre"
-                                name="nombre"
-                            />
-                        </p>
+                            <p>
+                                <label for="recorridoGuiado">
+                                    Recorrido guiado
+                                </label>
 
-                        <p>
-                            <label for="correo">Tu correo electrónico</label>
-                            <input
-                                required
-                                type="email"
-                                id="correo"
-                                name="correo"
-                            />
-                        </p>
+                                <select
+                                    name="recorridoGuiado"
+                                    id="recorridoGuiado"
+                                >
+                                    <option value="Ninguno">Ninguno</option>
+                                    <option value="Río y parques">
+                                        Río y parques
+                                    </option>
+                                    <option value="Sabores de Barrio">
+                                        Sabores de Barrio
+                                    </option>
+                                    <option value="Reto La palma">
+                                        Reto La palma
+                                    </option>
+                                </select>
+                            </p>
 
-                        <p>
-                            <label for="celular">Tu número de celular</label>
-                            <input
-                                required
-                                pattern="^3\d*$"
-                                minlength="10"
-                                maxlength="10"
-                                title="El número debe empezar con un 3 y solo deben ser números"
-                                type="text"
-                                id="celular"
-                                name="celular"
-                            />
-                        </p>
+                            <p>
+                                <label for="cantidadBicis">
+                                    Cantidad de bicicletas
+                                </label>
+                                <input
+                                    required
+                                    min="1"
+                                    max="6"
+                                    type="number"
+                                    name="cantidadBicis"
+                                    id="cantidadBicis"
+                                />
+                            </p>
 
-                        <p>
-                            <label for="documento"
-                                >Tu número de documento</label
-                            >
-                            <input
-                                title="Solo debe escribir números"
-                                minlength="6"
-                                maxlength="10"
-                                pattern="\d*"
-                                type="text"
-                                id="documento"
-                                name="documento"
-                            />
-                        </p>
-                    </fieldset>
+                            <p>
+                                <label for="comentarios"
+                                    >Comentarios extra</label
+                                >
 
-                    <fieldset>
-                        <legend>Tu alquiler</legend>
+                                <textarea
+                                    maxlength="300"
+                                    name="comentarios"
+                                    id="comentarios"
+                                    style="resize: vertical"
+                                ></textarea>
+                            </p>
+                        </fieldset>
 
-                        <p>
-                            <label for="fechaAlquiler"
-                                >Fecha de tu alquiler</label
-                            >
-                            <input
-                                required
-                                type="date"
-                                name="fechaAlquiler"
-                                id="fechaAlquiler"
-                                min="2026-11-01"
-                                max="2026-12-31"
-                            />
-                        </p>
+                        <fieldset>
+                            <legend>Confirmación</legend>
 
-                        <p>
-                            <label for="tipoBicicleta">
-                                Tipo de bicicleta
-                            </label>
+                            <p>
+                                <label for="politicas"
+                                    >¿Acepta las políticas del alquiler?</label
+                                >
+                                <input
+                                    required
+                                    type="checkbox"
+                                    name="politicas"
+                                    id="politicas"
+                                />
+                            </p>
+                        </fieldset>
 
-                            <select
-                                required
-                                name="tipoBicicleta"
-                                id="tipoBicicleta"
-                            >
-                                <option value="Urbana">Urbana</option>
-                                <option value="Montaña">Montaña</option>
-                                <option value="Eléctrica">Eléctrica</option>
-                            </select>
-                        </p>
+                        <button type="submit">Enviar formulario</button>
+                    </form>
+                </section>
 
-                        <p>
-                            <label for="plan"> Plan </label>
+                <section>
+                    <h1>Reserva ti Bicicleta ya mimo</h1>
 
-                            <select required name="plan" id="plan">
-                                <option value="1 hora">1 hora</option>
-                                <option value="Medio día">Medio día</option>
-                                <option value="Día completo">
-                                    Día completo
-                                </option>
-                            </select>
-                        </p>
+                    <p>
+                        Escríbenos a
+                        <a href="mailto:correosupercool@example.com"
+                            >este correo</a
+                        >.
+                    </p>
 
-                        <p>
-                            <label for="recorridoGuiado">
-                                Recorrido guiado
-                            </label>
+                    <h2>Horario</h2>
 
-                            <select name="recorridoGuiado" id="recorridoGuiado">
-                                <option value="Ninguno">Ninguno</option>
-                                <option value="Río y parques">
-                                    Río y parques
-                                </option>
-                                <option value="Sabores de Barrio">
-                                    Sabores de Barrio
-                                </option>
-                                <option value="Reto La palma">
-                                    Reto La palma
-                                </option>
-                            </select>
-                        </p>
+                    <ul>
+                        <li>Lune: no ai serbisio</li>
 
-                        <p>
-                            <label for="cantidadBicis">
-                                Cantidad de bicicletas
-                            </label>
-                            <input
-                                required
-                                min="1"
-                                max="6"
-                                type="number"
-                                name="cantidadBicis"
-                                id="cantidadBicis"
-                            />
-                        </p>
+                        <li>Marte: no ai serbisio</li>
 
-                        <p>
-                            <label for="comentarios">Comentarios extra</label>
+                        <li>Miercole: no ai serbisio</li>
 
-                            <textarea
-                                maxlength="300"
-                                name="comentarios"
-                                id="comentarios"
-                                style="resize: vertical"
-                            ></textarea>
-                        </p>
-                    </fieldset>
+                        <li>Jueve: no ai serbisio</li>
 
-                    <fieldset>
-                        <legend>Confirmación</legend>
+                        <li>Vielne: no ai serbisio</li>
 
-                        <p>
-                            <label for="politicas"
-                                >¿Acepta las políticas del alquiler?</label
-                            >
-                            <input
-                                required
-                                type="checkbox"
-                                name="politicas"
-                                id="politicas"
-                            />
-                        </p>
-                    </fieldset>
+                        <li>savados: no ai serbisio</li>
 
-                    <button type="submit">Enviar formulario</button>
-                </form>
-            </section>
+                        <li>donimgo: servisio de 3:00 a.m. a 3:01 a.m.</li>
+                    </ul>
+                </section>
+            </div>
         </main>
 
         <div imports="./use/footer.htm"></div>

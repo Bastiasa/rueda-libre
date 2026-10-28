@@ -21,30 +21,36 @@
         <div imports="use/ws-button.htm"></div>
 
         <main>
-            <section>
-                <h1>Rueda Libre</h1>
-                <p>Bienvenidos al mejor negocio de alquiler de bicicletas.</p>
+            <section id="hero">
+                <div class="centered-flexbox">
+                    <h1>Rueda Libre</h1>
+                    <p>
+                        Bienvenidos al mejor negocio de alquiler de bicicletas.
+                    </p>
 
-                <p>
-                    <a href="#foundus"> enkuentranos </a>
-                </p>
+                    <p>
+                        <a href="#foundus"> enkuentranos </a>
+                    </p>
+                </div>
+
+                <div>
+                    <img
+                        id="cover-image"
+                        src="img/portadas.jpeg"
+                        alt="Dos bicicletas, una azul y una naranja"
+                    />
+                </div>
             </section>
-
-            <img
-                id="cover-image"
-                src="img/portadas.jpeg"
-                alt="Dos bicicletas, una azul y una naranja"
-            />
 
             <section>
                 <h2>¿Quiénes somos?</h2>
                 <p>una enrpesa de bisiletas.</p>
-            </section>
 
-            <img
-                src="img/ruta.jpeg"
-                alt="Imagen de una ruta enmarcada en un mapa con una bicicleta roja"
-            />
+                <img
+                    src="img/ruta.jpeg"
+                    alt="Imagen de una ruta enmarcada en un mapa con una bicicleta roja"
+                />
+            </section>
 
             <section>
                 <h2>Nuestra flota</h2>
@@ -187,6 +193,160 @@
                         <img src="img/bijicleta1.webp" alt="Servicio 3" />
                         <h3>Servicio 3</h3>
                         <p>Incluye engrasamiento de <strong>cadena</strong></p>
+                    </article>
+                </div>
+            </section>
+
+            <!--
+                        <section>
+                <table class="fee-table" id="recorrios" border="1">
+                    <caption>
+                        Tarifa de recorrio uwu
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Recorrido</th>
+
+                            <th scope="col">Distancia</th>
+
+                            <th scope="col">Duración</th>
+
+                            <th scope="col">Nivel</th>
+
+                            <th scope="col">Presio por pelsona</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Río y parques</td>
+                            <td>12 km</td>
+                            <td>2 h</td>
+                            <td>fasil</td>
+                            <td>$45.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sabores de Barrio</td>
+                            <td>18 km</td>
+                            <td>3 h</td>
+                            <td>nedio</td>
+                            <td>$60.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Reto La palma</td>
+                            <td>25 km</td>
+                            <td>4 h</td>
+                            <td>difisilisimo</td>
+                            <td>$85.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+-->
+
+            <section>
+                <h2>Nuestras rutas :D</h2>
+
+                <div id="rutas">
+                    <article class="ruta">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkt40ztRLaQd5oEI0nP-sQum-Y0hlqGoBEBIxs67W-kmk4DVKvSK7jNAI&s=10"
+                            alt="Río y parques"
+                        />
+                        <div class="info">
+                            <h3>Río y parques</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Distancia</th>
+                                        <td>12 km</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Duración</th>
+                                        <td>2 h</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Dificultad</th>
+                                        <td>Fácil</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Por persona</th>
+                                        <td>$45.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="ruta">
+                        <img
+                            src="https://www.bike55.es/blog/wp-content/uploads/2019/01/mejores-rutas-ciclismo-del-mundo-825x510.jpg"
+                            alt="Sabores de Barrio"
+                        />
+                        <div class="info">
+                            <h3>Sabores de Barrio</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Distancia</th>
+                                        <td>18 km</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Duración</th>
+                                        <td>3 h</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Dificultad</th>
+                                        <td>Media</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Por persona</th>
+                                        <td>$60.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="ruta">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Scoydu1P4zlYbUadkz_f_uZSdCkWk2DtP6a5PcWq_aZAp1Ex0SSyyW5D&s=10"
+                            alt="Reto La Palma"
+                        />
+                        <div class="info">
+                            <h3>Reto La Palma</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Distancia</th>
+                                        <td>25 km</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Duración</th>
+                                        <td>4 h</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Dificultad</th>
+                                        <td>Muy difícil</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>Por persona</th>
+                                        <td>$85.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </article>
                 </div>
             </section>
