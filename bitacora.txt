@@ -117,3 +117,11 @@ Cuando estrecho la página, los links del menu del header se reacomodan.
 A 1280px se ven 4 columnas por fila.
 A 900px se ven 4 columnas por fila.
 A 500px se ven 2 columnas por fila.
+
+28 oct 2026
+
+El footer se veía aplastado y generaba un scroll horizontal. Apliqué repeat(auto-fit, ...) para corregirlo y en el media query repeat(3, 1fr)
+
+
+
+

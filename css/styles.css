@@ -225,6 +225,10 @@ select {
 #main-header {
     display: flex;
     justify-content: space-between;
+
+    flex-direction: column;
+    align-items: center;
+
     padding: 2rem 4rem;
 }
 
@@ -244,7 +248,7 @@ select {
 
 #main-footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
     gap: 1.5rem;
 }
 
@@ -292,7 +296,7 @@ select {
     background-color: var(--highlight-color);
     padding: var(--spacing-lg);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
 
     min-height: 100vh;
@@ -305,7 +309,7 @@ select {
 #rutas {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-md);
 }
 
@@ -327,6 +331,38 @@ select {
 
 #reservas-inicio {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+}
+
+.scroll-h {
+    overflow: auto;
+}
+
+table {
+    width: 500px;
+    min-width: 100%;
+}
+
+@media (min-width: 768px) {
+    #reservas-inicio {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #main-footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    table {
+        margin-inline: auto;
+    }
 }
