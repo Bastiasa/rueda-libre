@@ -339,7 +339,7 @@ select {
     overflow: auto;
 }
 
-table {
+.fee-table {
     width: 500px;
     min-width: 100%;
 }
@@ -362,7 +362,7 @@ table {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    table {
+    .fee-table {
         margin-inline: auto;
     }
 }
