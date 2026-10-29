@@ -126,3 +126,12 @@ Comparación: Bootstrap VS CSS plano
 
 4 minutos en total, creo que las líneas de CSS son mayores. Como sea, prefiero mil veces escribir una clase de CSS y que esa contenga todos los estilos a tener que repetir `col-12 col-sm-6 col-md-4` por cada elemento y que cada vez que quiera editar uno de ellos, tenga que reescribir todo de nuevo.
 
+29 oct 2026
+
+Encontré estas clases:
+
+d-flex: Hace `display: flex;`
+d-block: Hace `display: block;`
+d-inline: Hace `display: inline;`
+d-grid: Hace `display: grid;`
+d-none: Hace `display: none;`
