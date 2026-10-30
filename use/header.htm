@@ -1,19 +1,48 @@
 <header id="main-header">
-    <a id="h-name" href="../"> Rueda Libre </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Nombre de la página -->
+            <a id="h-name" class="navbar-brand" href="../"> Rueda Libre </a>
 
-    <nav>
-        <ul id="h-menu">
-            <li>
-                <a class="activo" href="../">Inicio</a>
-            </li>
-            <li>
-                <a class="activo" href="../paginas/tarifas.html"
-                    >Tarifas y rutas</a
-                >
-            </li>
-            <li>
-                <a class="activo" href="../paginas/reservas.html">Reservas</a>
-            </li>
-        </ul>
+            <!-- Botón del menú para celulares -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#h-menu"
+                aria-controls="h-menu"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Opciones de navegación -->
+            <div class="collapse navbar-collapse" id="h-menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link activo" href="../"> Inicio </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link activo"
+                            href="../paginas/tarifas.html"
+                        >
+                            Tarifas y rutas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link activo"
+                            href="../paginas/reservas.html"
+                        >
+                            Reservas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>

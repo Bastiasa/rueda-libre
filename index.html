@@ -3,196 +3,337 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
 
+        <!-- Fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="./css/styles.css" />
-        <script src="js/import.js"></script>
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Estilos propios: siempre después de Bootstrap -->
+        <!--<link rel="stylesheet" href="./css/styles.css" /> -->
+
+        <script src="js/import.js" defer></script>
     </head>
+
     <body>
         <div imports="use/header.htm"></div>
 
         <div imports="use/ws-button.htm"></div>
 
         <main>
-            <section id="hero">
-                <div class="centered-flexbox">
-                    <h1>Rueda Libre</h1>
-                    <p>
-                        Bienvenidos al mejor negocio de alquiler de bicicletas.
-                    </p>
+            <section id="hero" class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center py-5">
+                        <div class="col-12 col-md-6 text-center text-md-start">
+                            <h1>Rueda Libre</h1>
 
-                    <p>
-                        <a href="#foundus"> enkuentranos </a>
-                    </p>
-                </div>
+                            <p>
+                                Bienvenidos al mejor negocio de alquiler de
+                                bicicletas.
+                            </p>
 
-                <div>
-                    <img
-                        id="cover-image"
-                        src="img/portadas.jpeg"
-                        alt="Dos bicicletas, una azul y una naranja"
-                    />
-                </div>
-            </section>
+                            <a href="#foundus" class="btn btn-action-call">
+                                Encuéntranos
+                            </a>
+                        </div>
 
-            <section>
-                <h2>¿Quiénes somos?</h2>
-                <p>una enrpesa de bisiletas.</p>
-
-                <img
-                    src="img/ruta.jpeg"
-                    alt="Imagen de una ruta enmarcada en un mapa con una bicicleta roja"
-                />
-            </section>
-
-            <section>
-                <h2>Nuestra flota</h2>
-
-                <div id="nuestra-flota">
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Urbana Clásica</h3>
-                        <p>Cómoda y liviana para las ciclorrutas.</p>
-                        <p class="price">$10.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Urbana Plegable</h3>
-                        <p>
-                            Se dobla en segundos; ideal para combinar con el
-                            metro.
-                        </p>
-                        <p class="price">$12.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Montaña Trail</h3>
-                        <p>
-                            Suspensión delantera y 21 cambios para las subidas.
-                        </p>
-                        <p class="price">$15.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Gravel Aventura</h3>
-                        <p>Para rutas mixtas de asfalto y destapado.</p>
-                        <p class="price">$18.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Eléctrica Urbana</h3>
-                        <p>Asistencia eléctrica con 45 km de autonomía.</p>
-                        <p class="price">$25.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-                    <article class="card">
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Infantil</h3>
-                        <p>Para niños de 6 a 10 años.</p>
-                        <p class="price">$8.000</p>
-
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
-
-                    <article>
-                        <img
-                            src="https://placehold.co/500x400"
-                            alt="setsito yiko"
-                        />
-
-                        <h3>Tándem</h3>
-                        <p>Para dos personas; perfecta para pasear en pareja</p>
-                        <p class="price">$20.000</p>
-                        <a href="paginas/reservas.html" class="buy">
-                            Reservar
-                        </a>
-                    </article>
+                        <div class="col-12 col-md-6 mt-4 mt-md-0">
+                            <img
+                                id="cover-image"
+                                class="img-fluid rounded"
+                                src="img/portadas.jpeg"
+                                alt="Dos bicicletas, una azul y una naranja"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section>
-                <h2>Nuestros servicios</h2>
-
-                <div class="services-container">
-                    <article class="service-card">
-                        <span class="badge"> Nuevo </span>
-
-                        <img
-                            src="img/bici-electrica.png"
-                            alt="Bicicleta eléctrica"
-                        />
-
-                        <h3>Alquiler de bicicleta eléctrica</h3>
+            <section class="container my-5" id="quienes-somos">
+                <div class="row align-items-center g-4">
+                    <!-- Texto -->
+                    <div class="col-12 col-md-6">
+                        <h2>¿Quiénes somos?</h2>
 
                         <p>
-                            Servicio nuevo: Alquiler de bicicleta eléctrica de
-                            alta calidad.
+                            Somos una empresa dedicada al alquiler de
+                            bicicletas. Queremos ofrecerte una experiencia
+                            cómoda, económica y divertida para recorrer
+                            Medellín.
                         </p>
+
+                        <p>
+                            Contamos con diferentes tipos de bicicletas para que
+                            disfrutes de la ciudad y sus alrededores.
+                        </p>
+                    </div>
+
+                    <!-- Imagen -->
+                    <div class="col-12 col-md-6">
+                        <img
+                            src="img/ruta.jpeg"
+                            alt="Imagen de una ruta enmarcada en un mapa con una bicicleta roja"
+                            class="img-fluid rounded"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Nuestra flota</h2>
+
+                <div id="nuestra-flota" class="row g-4">
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta urbana clásica"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Urbana Clásica</h3>
+                                <p class="card-text">
+                                    Cómoda y liviana para las ciclorrutas.
+                                </p>
+                                <p class="price">$10.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="service-card">
-                        <img src="img/bijicleta1.webp" alt="Servicio 1" />
-                        <h3>Servicio 1</h3>
-                        <p>Incluye arreglo de <strong>suspensión</strong></p>
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta urbana plegable"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Urbana Plegable</h3>
+                                <p class="card-text">
+                                    Se dobla en segundos; ideal para combinar
+                                    con el metro.
+                                </p>
+                                <p class="price">$12.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="service-card">
-                        <img src="img/bijicleta1.webp" alt="Servicio 2" />
-                        <h3>Servicio 2</h3>
-                        <p>Incluye arreglo de <strong>frenos</strong></p>
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta de montaña"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Montaña Trail</h3>
+                                <p class="card-text">
+                                    Suspensión delantera y 21 cambios para las
+                                    subidas.
+                                </p>
+                                <p class="price">$15.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="service-card">
-                        <img src="img/bijicleta1.webp" alt="Servicio 3" />
-                        <h3>Servicio 3</h3>
-                        <p>Incluye engrasamiento de <strong>cadena</strong></p>
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta gravel"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Gravel Aventura</h3>
+                                <p class="card-text">
+                                    Para rutas mixtas de asfalto y destapado.
+                                </p>
+                                <p class="price">$18.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta eléctrica"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Eléctrica Urbana</h3>
+                                <p class="card-text">
+                                    Asistencia eléctrica con 45 km de autonomía.
+                                </p>
+                                <p class="price">$25.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta infantil"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Infantil</h3>
+                                <p class="card-text">
+                                    Para niños de 6 a 10 años.
+                                </p>
+                                <p class="price">$8.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="card-img-top"
+                                alt="Bicicleta tándem"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Tándem</h3>
+                                <p class="card-text">
+                                    Para dos personas; perfecta para pasear en
+                                    pareja.
+                                </p>
+                                <p class="price">$20.000</p>
+                                <a href="paginas/reservas.html" class="buy"
+                                    >Reservar</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="container my-5" id="servicios">
+                <h2 class="text-center mb-4">Nuestros servicios</h2>
+
+                <div class="row g-4">
+                    <!-- Servicio 1 -->
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <span class="badge bg-success align-self-start m-2">
+                                Nuevo
+                            </span>
+
+                            <img
+                                src="img/bici-electrica.png"
+                                class="card-img-top"
+                                alt="Bicicleta eléctrica"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Alquiler de bicicleta eléctrica
+                                </h3>
+
+                                <p class="card-text">
+                                    Servicio nuevo: alquiler de bicicleta
+                                    eléctrica de alta calidad.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 2 -->
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <img
+                                src="img/bijicleta1.webp"
+                                class="card-img-top"
+                                alt="Servicio de arreglo de suspensión"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Servicio 1</h3>
+
+                                <p class="card-text">
+                                    Incluye arreglo de
+                                    <strong>suspensión</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 3 -->
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <img
+                                src="img/bijicleta1.webp"
+                                class="card-img-top"
+                                alt="Servicio de arreglo de frenos"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Servicio 2</h3>
+
+                                <p class="card-text">
+                                    Incluye arreglo de <strong>frenos</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Servicio 4 -->
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <img
+                                src="img/bijicleta1.webp"
+                                class="card-img-top"
+                                alt="Servicio de mantenimiento de cadena"
+                            />
+
+                            <div class="card-body">
+                                <h3 class="card-title">Servicio 3</h3>
+
+                                <p class="card-text">
+                                    Incluye engrasamiento de
+                                    <strong>cadena</strong>.
+                                </p>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -246,173 +387,208 @@
             </section>
 -->
 
-            <section>
-                <h2>Nuestras rutas :D</h2>
+            <section class="container my-5" id="galeria-rutas">
+                <h2 class="text-center mb-4">Nuestras rutas :D</h2>
 
-                <div id="rutas">
-                    <article class="ruta">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkt40ztRLaQd5oEI0nP-sQum-Y0hlqGoBEBIxs67W-kmk4DVKvSK7jNAI&s=10"
-                            alt="Río y parques"
-                        />
-                        <div class="info">
-                            <h3>Río y parques</h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>Distancia</th>
-                                        <td>12 km</td>
-                                    </tr>
+                <div class="row g-4">
+                    <!-- Ruta 1 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkt40ztRLaQd5oEI0nP-sQum-Y0hlqGoBEBIxs67W-kmk4DVKvSK7jNAI&s=10"
+                                class="card-img-top"
+                                alt="Río y parques"
+                            />
 
-                                    <tr>
-                                        <th>Duración</th>
-                                        <td>2 h</td>
-                                    </tr>
+                            <div class="card-body">
+                                <h3 class="card-title">Río y parques</h3>
 
-                                    <tr>
-                                        <th>Dificultad</th>
-                                        <td>Fácil</td>
-                                    </tr>
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Distancia</th>
+                                            <td>12 km</td>
+                                        </tr>
 
-                                    <tr>
-                                        <th>Por persona</th>
-                                        <td>$45.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        <tr>
+                                            <th>Duración</th>
+                                            <td>2 h</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Dificultad</th>
+                                            <td>Fácil</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Por persona</th>
+                                            <td>$45.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="ruta">
-                        <img
-                            src="https://www.bike55.es/blog/wp-content/uploads/2019/01/mejores-rutas-ciclismo-del-mundo-825x510.jpg"
-                            alt="Sabores de Barrio"
-                        />
-                        <div class="info">
-                            <h3>Sabores de Barrio</h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>Distancia</th>
-                                        <td>18 km</td>
-                                    </tr>
+                    <!-- Ruta 2 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://www.bike55.es/blog/wp-content/uploads/2019/01/mejores-rutas-ciclismo-del-mundo-825x510.jpg"
+                                class="card-img-top"
+                                alt="Sabores de Barrio"
+                            />
 
-                                    <tr>
-                                        <th>Duración</th>
-                                        <td>3 h</td>
-                                    </tr>
+                            <div class="card-body">
+                                <h3 class="card-title">Sabores de Barrio</h3>
 
-                                    <tr>
-                                        <th>Dificultad</th>
-                                        <td>Media</td>
-                                    </tr>
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Distancia</th>
+                                            <td>18 km</td>
+                                        </tr>
 
-                                    <tr>
-                                        <th>Por persona</th>
-                                        <td>$60.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        <tr>
+                                            <th>Duración</th>
+                                            <td>3 h</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Dificultad</th>
+                                            <td>Media</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Por persona</th>
+                                            <td>$60.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="ruta">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Scoydu1P4zlYbUadkz_f_uZSdCkWk2DtP6a5PcWq_aZAp1Ex0SSyyW5D&s=10"
-                            alt="Reto La Palma"
-                        />
-                        <div class="info">
-                            <h3>Reto La Palma</h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>Distancia</th>
-                                        <td>25 km</td>
-                                    </tr>
+                    <!-- Ruta 3 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Scoydu1P4zlYbUadkz_f_uZSdCkWk2DtP6a5PcWq_aZAp1Ex0SSyyW5D&s=10"
+                                class="card-img-top"
+                                alt="Reto La Palma"
+                            />
 
-                                    <tr>
-                                        <th>Duración</th>
-                                        <td>4 h</td>
-                                    </tr>
+                            <div class="card-body">
+                                <h3 class="card-title">Reto La Palma</h3>
 
-                                    <tr>
-                                        <th>Dificultad</th>
-                                        <td>Muy difícil</td>
-                                    </tr>
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Distancia</th>
+                                            <td>25 km</td>
+                                        </tr>
 
-                                    <tr>
-                                        <th>Por persona</th>
-                                        <td>$85.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        <tr>
+                                            <th>Duración</th>
+                                            <td>4 h</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Dificultad</th>
+                                            <td>Muy difícil</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Por persona</th>
+                                            <td>$85.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <section>
+            <section class="container my-5">
                 <h2>¿Cómo alquilar?</h2>
-                <p>Alquilando d la siguiente folma:</p>
+
+                <p>Alquilando de la siguiente forma:</p>
 
                 <ol>
                     <li>Llamarnos</li>
-
-                    <li>desir "quiero alkilar"</li>
-
-                    <li>alkilar</li>
-
-                    <li>aceitasao</li>
-
-                    <li>listo</li>
+                    <li>Decir "quiero alquilar"</li>
+                    <li>Alquilar</li>
+                    <li>Aceptar</li>
+                    <li>Listo</li>
                 </ol>
 
-                <p>esthos son nuestro venefisions:</p>
+                <h3 class="text-center my-4">Estos son nuestros beneficios:</h3>
 
-                <ul>
-                    <li>Mui vuea calida</li>
+                <div class="row g-3">
+                    <article class="col-12 col-md-4">
+                        <div class="p-3 rounded text-center h-100">
+                            <h4>Buena calidad</h4>
+                            <p>Disfruta de bicicletas de excelente calidad.</p>
+                        </div>
+                    </article>
 
-                    <li>
-                        <em>Calida buena</em>
-                    </li>
+                    <article class="col-12 col-md-4">
+                        <div class="p-3 rounded text-center h-100">
+                            <h4>Comodidad</h4>
+                            <p>Viaja cómodamente por la ciudad.</p>
+                        </div>
+                    </article>
 
-                    <li>eselente calida</li>
-                </ul>
-
-                <p>
-                    Revisa nuetras tarifas:
-                    <a href="paginas/tarifas.html#bisikletas">Bisikletas</a>
-                    .
-                    <a href="paginas/tarifas.html#recorrios">RecorridOs</a>
-                </p>
-
-                <p>
-                    <a href="paginas/reservas.html" class="btn-action-call"
-                        >Reservar ahora</a
-                    >
-                </p>
+                    <article class="col-12 col-md-4">
+                        <div class="p-3 rounded text-center h-100">
+                            <h4>Excelentes precios</h4>
+                            <p>
+                                Encuentra opciones para todos los presupuestos.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </section>
 
-            <section>
-                <h2 id="foundus">Encuéntranos</h2>
+            <section class="container my-5" id="foundus">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <h2 class="mb-4">Encuéntranos</h2>
 
-                <p>
-                    <a
-                        href="https://maps.app.goo.gl/pf4dngJeoCYVcXwi8"
-                        target="_blank"
-                    >
-                        Nuetra uvikasion
-                    </a>
+                        <p>
+                            ¡Estamos listos para ayudarte! Visítanos o
+                            escríbenos para conocer nuestros servicios.
+                        </p>
 
-                    .
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-center gap-3"
+                        >
+                            <a
+                                href="https://maps.app.goo.gl/pf4dngJeoCYVcXwi8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-success"
+                            >
+                                📍 Nuestra ubicación
+                            </a>
 
-                    <a href="mailto:hola@ruedalibre.example"> Ecribeno </a>
-                </p>
+                            <a
+                                href="mailto:hola@ruedalibre.example"
+                                class="btn btn-outline-success"
+                            >
+                                ✉️ Escríbenos
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <img src="img/bijicleta1.webp" alt="Bicicleta roja" />
         </main>
 
         <div imports="use/footer.htm"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
