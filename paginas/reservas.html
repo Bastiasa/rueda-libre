@@ -15,13 +15,13 @@
             rel="stylesheet"
         />
 
-        <!-- Bootstrap -->
+        <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
         />
 
-        <!-- Estilos propios -->
+        <!-- CSS propio -->
         <!--<link rel="stylesheet" href="../css/styles.css" />-->
 
         <script src="../js/import.js"></script>
@@ -40,12 +40,34 @@
                         <div class="card-body">
                             <h1 class="mb-4">Formulario de reserva</h1>
 
-                            <form method="post">
+                            <!-- ALERTA INFORMATIVA -->
+                            <div
+                                class="alert alert-info alert-dismissible fade show"
+                                role="alert"
+                            >
+                                <strong>¡Recuerda!</strong>
+                                Debes traer tu documento de identidad original
+                                para recoger tu bicicleta.
+
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Cerrar"
+                                ></button>
+                            </div>
+
+                            <form
+                                class="needs-validation"
+                                method="post"
+                                novalidate
+                            >
                                 <!-- DATOS PERSONALES -->
                                 <fieldset class="mb-4">
                                     <legend class="mb-3">Tus datos</legend>
 
                                     <div class="row g-3">
+                                        <!-- NOMBRE -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="nombre"
@@ -62,8 +84,14 @@
                                                 name="nombre"
                                                 class="form-control"
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Escribe tu nombre completo con
+                                                mínimo 3 caracteres.
+                                            </div>
                                         </div>
 
+                                        <!-- CORREO -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="correo"
@@ -79,8 +107,15 @@
                                                 name="correo"
                                                 class="form-control"
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Ingresa un correo electrónico
+                                                válido, por ejemplo
+                                                nombre@correo.com.
+                                            </div>
                                         </div>
 
+                                        <!-- CELULAR -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="celular"
@@ -100,8 +135,14 @@
                                                 name="celular"
                                                 class="form-control"
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Escribe un celular de 10 dígitos
+                                                que comience por el número 3.
+                                            </div>
                                         </div>
 
+                                        <!-- DOCUMENTO -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="documento"
@@ -111,15 +152,23 @@
                                             </label>
 
                                             <input
-                                                title="Solo debe escribir números"
-                                                minlength="6"
-                                                maxlength="10"
-                                                pattern="\d*"
+                                                required
                                                 type="text"
                                                 id="documento"
                                                 name="documento"
                                                 class="form-control"
+                                                minlength="6"
+                                                maxlength="10"
+                                                pattern="[0-9]{6,10}"
+                                                title="El documento debe contener entre 6 y 10 números, sin letras."
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Ingresa un documento válido de
+                                                entre 6 y 10 dígitos. No
+                                                utilices letras ni caracteres
+                                                especiales.
+                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -129,6 +178,7 @@
                                     <legend class="mb-3">Tu alquiler</legend>
 
                                     <div class="row g-3">
+                                        <!-- FECHA -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="fechaAlquiler"
@@ -146,8 +196,15 @@
                                                 max="2026-12-31"
                                                 class="form-control"
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Selecciona una fecha entre el 1
+                                                de noviembre y el 31 de
+                                                diciembre de 2026.
+                                            </div>
                                         </div>
 
+                                        <!-- BICICLETA -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="tipoBicicleta"
@@ -172,8 +229,14 @@
                                                     Eléctrica
                                                 </option>
                                             </select>
+
+                                            <div class="invalid-feedback">
+                                                Selecciona el tipo de bicicleta
+                                                que deseas alquilar.
+                                            </div>
                                         </div>
 
+                                        <!-- PLAN -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="plan"
@@ -198,8 +261,14 @@
                                                     Día completo
                                                 </option>
                                             </select>
+
+                                            <div class="invalid-feedback">
+                                                Selecciona el tiempo de alquiler
+                                                que prefieras.
+                                            </div>
                                         </div>
 
+                                        <!-- RECORRIDO -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="recorridoGuiado"
@@ -230,6 +299,7 @@
                                             </select>
                                         </div>
 
+                                        <!-- CANTIDAD -->
                                         <div class="col-12 col-md-6">
                                             <label
                                                 for="cantidadBicis"
@@ -247,8 +317,14 @@
                                                 id="cantidadBicis"
                                                 class="form-control"
                                             />
+
+                                            <div class="invalid-feedback">
+                                                Ingresa una cantidad entre 1 y 6
+                                                bicicletas.
+                                            </div>
                                         </div>
 
+                                        <!-- COMENTARIOS -->
                                         <div class="col-12">
                                             <label
                                                 for="comentarios"
@@ -285,11 +361,27 @@
                                             for="politicas"
                                             class="form-check-label"
                                         >
-                                            ¿Acepta las políticas del alquiler?
+                                            Acepto las políticas del alquiler.
                                         </label>
+
+                                        <div class="invalid-feedback">
+                                            Debes aceptar las políticas para
+                                            continuar con la reserva.
+                                        </div>
                                     </div>
+
+                                    <!-- BOTÓN PARA ABRIR EL MODAL -->
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-success btn-sm mt-3"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalPoliticas"
+                                    >
+                                        Leer políticas de alquiler
+                                    </button>
                                 </fieldset>
 
+                                <!-- ENVIAR -->
                                 <button type="submit" class="btn btn-success">
                                     Enviar formulario
                                 </button>
@@ -298,7 +390,7 @@
                     </div>
                 </section>
 
-                <!-- INFORMACIÓN: 4 COLUMNAS -->
+                <!-- INFORMACIÓN DE CONTACTO: 4 COLUMNAS -->
                 <section class="col-12 col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
@@ -348,8 +440,103 @@
             </div>
         </main>
 
+        <!-- MODAL DE POLÍTICAS -->
+        <div
+            class="modal fade"
+            id="modalPoliticas"
+            tabindex="-1"
+            aria-labelledby="tituloPoliticas"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="tituloPoliticas">
+                            Políticas de alquiler
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Cerrar"
+                        ></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>
+                            Antes de alquilar una bicicleta, debes tener en
+                            cuenta las siguientes políticas:
+                        </p>
+
+                        <ol>
+                            <li class="mb-2">
+                                Presenta tu documento de identidad original al
+                                recoger la bicicleta.
+                            </li>
+
+                            <li class="mb-2">
+                                Revisa la bicicleta con el asesor antes de
+                                salir.
+                            </li>
+
+                            <li class="mb-2">
+                                Cada 15 minutos de retraso en la devolución
+                                tienen un recargo de $5.000.
+                            </li>
+
+                            <li class="mb-2">
+                                Los daños por mal uso se cobran según el costo
+                                de la reparación.
+                            </li>
+
+                            <li class="mb-2">
+                                Los menores de edad deben estar acompañados por
+                                un adulto responsable.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-success"
+                            data-bs-dismiss="modal"
+                        >
+                            Entendido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div imports="../use/footer.htm"></div>
 
+        <!-- Bootstrap Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Validación oficial de Bootstrap -->
+        <script>
+            (() => {
+                "use strict";
+
+                const forms = document.querySelectorAll(".needs-validation");
+
+                Array.from(forms).forEach((form) => {
+                    form.addEventListener(
+                        "submit",
+                        (event) => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+
+                            form.classList.add("was-validated");
+                        },
+                        false,
+                    );
+                });
+            })();
+        </script>
     </body>
 </html>
