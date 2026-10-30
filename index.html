@@ -15,14 +15,20 @@
             rel="stylesheet"
         />
 
-        <!-- Bootstrap -->
+        <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
         />
 
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
+
         <!-- Estilos propios: siempre después de Bootstrap -->
-        <!--<link rel="stylesheet" href="./css/styles.css" /> -->
+        <link rel="stylesheet" href="./css/styles.css" />
 
         <script src="js/import.js" defer></script>
     </head>
@@ -65,7 +71,7 @@
                 <div class="row align-items-center g-4">
                     <!-- Texto -->
                     <div class="col-12 col-md-6">
-                        <h2>¿Quiénes somos?</h2>
+                        <h2 class="section-title">¿Quiénes somos?</h2>
 
                         <p>
                             Somos una empresa dedicada al alquiler de
@@ -92,7 +98,7 @@
             </section>
 
             <section class="container my-5">
-                <h2 class="text-center mb-4">Nuestra flota</h2>
+                <h2 class="section-title text-center mb-4">Nuestra flota</h2>
 
                 <div id="nuestra-flota" class="row g-4">
                     <article class="col-12 col-md-6 col-lg-4">
@@ -248,7 +254,9 @@
             </section>
 
             <section class="container my-5" id="servicios">
-                <h2 class="text-center mb-4">Nuestros servicios</h2>
+                <h2 class="section-title text-center mb-4">
+                    Nuestros servicios
+                </h2>
 
                 <div class="row g-4">
                     <!-- Servicio 1 -->
@@ -388,7 +396,9 @@
 -->
 
             <section class="container my-5" id="galeria-rutas">
-                <h2 class="text-center mb-4">Nuestras rutas :D</h2>
+                <h2 class="section-title text-center mb-4">
+                    Nuestras rutas :D
+                </h2>
 
                 <div class="row g-4">
                     <!-- Ruta 1 -->
@@ -511,7 +521,7 @@
             </section>
 
             <section class="container my-5">
-                <h2>¿Cómo alquilar?</h2>
+                <h2 class="section-title">¿Cómo alquilar?</h2>
 
                 <p>Alquilando de la siguiente forma:</p>
 
@@ -554,7 +564,7 @@
             <section class="container my-5" id="foundus">
                 <div class="row justify-content-center text-center">
                     <div class="col-12 col-md-8 col-lg-6">
-                        <h2 class="mb-4">Encuéntranos</h2>
+                        <h2 class="section-title mb-4">Encuéntranos</h2>
 
                         <p>
                             ¡Estamos listos para ayudarte! Visítanos o
@@ -584,7 +594,12 @@
                 </div>
             </section>
 
-            <img src="img/bijicleta1.webp" alt="Bicicleta roja" />
+            <img
+                style="max-width: 400px"
+                class="d-block mx-auto"
+                src="img/bijicleta1.webp"
+                alt="Bicicleta roja"
+            />
         </main>
 
         <div imports="use/footer.htm"></div>

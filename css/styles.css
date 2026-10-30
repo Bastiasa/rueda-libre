@@ -1,48 +1,9 @@
-/*
-
-Verde Ruta
-	
-
-#1E7A4F
-	
-
-Botones y enlaces
-
-Naranja Pedal
-	
-
-#F39A2B
-	
-
-Destacados y botones secundarios
-
-Azul Noche
-	
-
-#14213D
-	
-
-Títulos y encabezado
-
-Crema
-	
-
-#FAF6EF
-	
-
-Fondo general
-
-Gris Asfalto
-	
-
-#5B6470
-	
-
-Texto secundario
-
-*/
+/* =========================================
+   IDENTIDAD VISUAL - RUEDA LIBRE
+========================================= */
 
 :root {
+    /* Colores de marca */
     --ws-green: #25d366;
     --url-color: #1e7a4f;
     --highlight-color: #f39a2b;
@@ -51,38 +12,52 @@ Texto secundario
     --secondary-text-color: #5b6470;
     --primary-text-color: rgb(33, 33, 33);
 
-    --title-font: "Montserrat";
+    /* Tipografía */
+    --title-font: "Montserrat", sans-serif;
     --title-weight: 700;
 
-    --text-font: "Open Sans";
+    --text-font: "Open Sans", sans-serif;
     --text-weight: 500;
 
+    /* Espaciado */
     --spacing-sm: 0.25rem;
     --spacing-md: 0.67rem;
     --spacing-lg: 1rem;
+
+    /* Variables globales Bootstrap */
+    --bs-primary: #1e7a4f;
+    --bs-primary-rgb: 30, 122, 79;
+
+    --bs-body-font-family: "Open Sans", sans-serif;
+    --bs-body-color: #212121;
+    --bs-body-bg: #faf6ef;
+
+    --bs-secondary-color: #5b6470;
+
+    --bs-link-color: #1e7a4f;
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color: #14213d;
+
+    --bs-border-radius: 0.65rem;
+    --bs-border-radius-lg: 0.85rem;
 }
+
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
 
 * {
     box-sizing: border-box;
-}
-
-main {
-    max-width: 64rem;
-    margin-inline: auto;
 }
 
 img {
     width: 100%;
 }
 
-#cover-image {
-    height: 100vh;
-}
-
-html {
+body {
     font-family: var(--text-font);
     font-weight: var(--text-weight);
-
+    color: var(--primary-text-color);
     background-color: var(--background-color);
 }
 
@@ -93,276 +68,118 @@ h4,
 h5,
 h6 {
     font-family: var(--title-font);
-    font-weight: var(--text-weight);
+    font-weight: var(--title-weight);
     color: var(--title-color);
 }
 
-a {
-    color: var(--url-color);
+/* =========================================
+   BOTÓN VERDE RUTA
+========================================= */
+
+.btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #1e7a4f;
+    --bs-btn-border-color: #1e7a4f;
+
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #165c3c;
+    --bs-btn-hover-border-color: #165c3c;
+
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #124a30;
+    --bs-btn-active-border-color: #124a30;
+
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
 }
 
-#menu a {
-    color: var(--url-color);
-    font-weight: 600;
+/* =========================================
+   BOTÓN NARANJA PEDAL
+========================================= */
+
+.btn-naranja {
+    --bs-btn-color: #14213d;
+    --bs-btn-bg: #f39a2b;
+    --bs-btn-border-color: #f39a2b;
+
+    --bs-btn-hover-color: #14213d;
+    --bs-btn-hover-bg: #db851b;
+    --bs-btn-hover-border-color: #db851b;
+
+    --bs-btn-active-color: #14213d;
+    --bs-btn-active-bg: #c67513;
+    --bs-btn-active-border-color: #c67513;
+
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
 }
 
-#menu a:hover {
+/* =========================================
+   COMPONENTES PROPIOS
+========================================= */
+
+/* Portada */
+.hero-brand {
+    background-color: var(--title-color);
+    color: #ffffff;
+    padding: 4rem 2rem;
+    border-radius: var(--bs-border-radius-lg);
+}
+
+.hero-brand h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Títulos de sección */
+.section-title {
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+/* Pie de página */
+.footer-brand {
+    background-color: var(--title-color);
+    color: #ffffff;
+    padding: 2.5rem 0;
+}
+
+.footer-brand h2 {
+    color: #ffffff;
+}
+
+.footer-brand a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-brand a:hover {
     color: var(--highlight-color);
 }
 
-#menu a:focus {
-    color: var(--secondary-text-color);
-}
-
-.btn-action-call {
-    padding: var(--spacing-md);
-    background-color: var(--url-color);
-    color: var(--background-color);
-}
-
-.btn-action-call:hover {
-    background-color: var(--highlight-color);
-    color: var(--secondary-text-color);
-}
-
-.btn-action-call:focus {
-    background-color: var(--highlight-color);
-    border: 2px solid var(--secondary-text-color);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    background-color: var(--highlight-color);
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-}
-
-.services-container {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.service-card {
-    position: relative;
-    display: inline-block;
-    border: 1px solid var(--highlight-color);
-    background-color: var(--highlight-color);
-    color: var(--primary-text-color);
-    border-radius: var(--spacing-sm);
-    width: 100%;
-}
-
-.service-card > :not(img) {
-    padding-inline: var(--spacing-md);
-}
-
-.service-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-}
-
-.service-card .badge {
-    position: absolute;
-    background-color: var(--highlight-color);
-    border-radius: calc(1px * infinity);
-
-    right: 0;
-    top: 0;
-
-    color: var(--secondary-text-color);
-
-    translate: 25% -50%;
-}
-
-.fee-table {
-    border-collapse: collapse;
-    background-color: var(--title-color);
-    color: var(--background-color);
-}
-
-.fee-table caption {
-    color: var(--title-color);
-}
-
-.fee-table th,
-.fee-table td {
-    padding: var(--spacing-sm);
+/* Iconos de beneficios */
+.benefit-icon {
+    color: var(--url-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .ws-button {
     position: fixed;
+    bottom: 3rem;
+    right: 3rem;
 
     width: 72px;
     height: 72px;
 
-    bottom: var(--spacing-lg);
-    right: var(--spacing-lg);
-
-    border-radius: calc(1px * infinity);
     background-color: var(--ws-green);
+    border-radius: calc(1px * infinity);
 
     background-image: url("../img/whatsapp-svgrepo-com.svg");
-
     background-size: 48px 48px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
-    z-index: 9999;
-}
-
-.ws-button:hover {
-    filter: brightness(1.25);
-}
-
-#main-header {
-    display: flex;
-    justify-content: space-between;
-
-    flex-direction: column;
-    align-items: center;
-
-    padding: 2rem 4rem;
-}
-
-#h-name {
-    font-size: xx-large;
-}
-
-#h-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-
-    flex-wrap: wrap;
-
-    list-style: none;
-}
-
-#main-footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
-    gap: 1.5rem;
-}
-
-#nuestra-flota {
-    gap: var(--spacing-md);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
-}
-
-#nuestra-flota .card {
-    display: flex;
-    flex-direction: column;
-}
-
-#nuestra-flota .price {
-    text-wrap-mode: nowrap;
-    overflow: hidden;
-    border: 1px solid calc(var(--url-color) * 0.5);
-    background-color: var(--highlight-color);
-    padding-right: var(--spacing-sm);
-    margin-right: auto;
-}
-
-#nuestra-flota .price::before {
-    content: "Precio por hora";
-    border-right: 1px solid calc(var(--url-color) * 0.5);
-    margin-right: var(--spacing-sm);
-    padding: var(--spacing-sm);
-
-    background-color: var(--url-color);
-    color: white;
-}
-
-#nuestra-flota .card .buy {
-    margin-top: auto;
-}
-
-.centered-flexbox {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#hero {
-    background-color: var(--highlight-color);
-    padding: var(--spacing-lg);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-
-    min-height: 100vh;
-}
-
-#cover-image {
-    object-fit: contain;
-}
-
-#rutas {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-}
-
-#rutas .ruta {
-    border: 1px solid var(--url-color);
-    border-radius: var(--spacing-md);
-    overflow: hidden;
-}
-
-#rutas .ruta .info {
-    padding: var(--spacing-sm);
-}
-
-#rutas .ruta img {
-    width: 100%;
-    height: 232px;
-    object-fit: cover;
-}
-
-#reservas-inicio {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-}
-
-.scroll-h {
-    overflow: auto;
-}
-
-.fee-table {
-    width: 500px;
-    min-width: 100%;
-}
-
-@media (min-width: 768px) {
-    #reservas-inicio {
-        grid-template-columns: 2fr 1fr;
-    }
-
-    #main-header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #main-footer {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #hero {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .fee-table {
-        margin-inline: auto;
-    }
+    z-index: 3000;
 }
