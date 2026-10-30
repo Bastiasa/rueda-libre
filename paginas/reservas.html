@@ -3,239 +3,353 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Reservas en Rueda livre</title>
 
+        <title>Reservas en Rueda Libre</title>
+
+        <!-- Fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
             rel="stylesheet"
         />
 
+        <!-- Bootstrap -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
         />
 
-        <script src="../js/import.js"></script>
+        <!-- Estilos propios -->
         <!--<link rel="stylesheet" href="../css/styles.css" />-->
+
+        <script src="../js/import.js"></script>
     </head>
+
     <body>
         <div imports="../use/header.htm"></div>
 
         <div imports="../use/ws-button.htm"></div>
 
-        <main>
-            <div id="reservas-inicio">
-                <section>
-                    <h2>Formulario de reserva</h2>
+        <main class="container my-5">
+            <div class="row g-4" id="reservas-inicio">
+                <!-- FORMULARIO: 8 COLUMNAS -->
+                <section class="col-12 col-md-8">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h1 class="mb-4">Formulario de reserva</h1>
 
-                    <form method="post">
-                        <fieldset>
-                            <legend>Tus datos</legend>
+                            <form method="post">
+                                <!-- DATOS PERSONALES -->
+                                <fieldset class="mb-4">
+                                    <legend class="mb-3">Tus datos</legend>
 
-                            <p>
-                                <label for="nombre">Tu nombre completo</label>
-                                <input
-                                    required
-                                    minlength="3"
-                                    type="text"
-                                    id="nombre"
-                                    name="nombre"
-                                />
-                            </p>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="nombre"
+                                                class="form-label"
+                                            >
+                                                Tu nombre completo
+                                            </label>
 
-                            <p>
-                                <label for="correo"
-                                    >Tu correo electrónico</label
-                                >
-                                <input
-                                    required
-                                    type="email"
-                                    id="correo"
-                                    name="correo"
-                                />
-                            </p>
+                                            <input
+                                                required
+                                                minlength="3"
+                                                type="text"
+                                                id="nombre"
+                                                name="nombre"
+                                                class="form-control"
+                                            />
+                                        </div>
 
-                            <p>
-                                <label for="celular"
-                                    >Tu número de celular</label
-                                >
-                                <input
-                                    required
-                                    pattern="^3\d*$"
-                                    minlength="10"
-                                    maxlength="10"
-                                    title="El número debe empezar con un 3 y solo deben ser números"
-                                    type="text"
-                                    id="celular"
-                                    name="celular"
-                                />
-                            </p>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="correo"
+                                                class="form-label"
+                                            >
+                                                Tu correo electrónico
+                                            </label>
 
-                            <p>
-                                <label for="documento"
-                                    >Tu número de documento</label
-                                >
-                                <input
-                                    title="Solo debe escribir números"
-                                    minlength="6"
-                                    maxlength="10"
-                                    pattern="\d*"
-                                    type="text"
-                                    id="documento"
-                                    name="documento"
-                                />
-                            </p>
-                        </fieldset>
+                                            <input
+                                                required
+                                                type="email"
+                                                id="correo"
+                                                name="correo"
+                                                class="form-control"
+                                            />
+                                        </div>
 
-                        <fieldset>
-                            <legend>Tu alquiler</legend>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="celular"
+                                                class="form-label"
+                                            >
+                                                Tu número de celular
+                                            </label>
 
-                            <p>
-                                <label for="fechaAlquiler"
-                                    >Fecha de tu alquiler</label
-                                >
-                                <input
-                                    required
-                                    type="date"
-                                    name="fechaAlquiler"
-                                    id="fechaAlquiler"
-                                    min="2026-11-01"
-                                    max="2026-12-31"
-                                />
-                            </p>
+                                            <input
+                                                required
+                                                pattern="^3\d*$"
+                                                minlength="10"
+                                                maxlength="10"
+                                                title="El número debe empezar con un 3 y solo deben ser números"
+                                                type="text"
+                                                id="celular"
+                                                name="celular"
+                                                class="form-control"
+                                            />
+                                        </div>
 
-                            <p>
-                                <label for="tipoBicicleta">
-                                    Tipo de bicicleta
-                                </label>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="documento"
+                                                class="form-label"
+                                            >
+                                                Tu número de documento
+                                            </label>
 
-                                <select
-                                    required
-                                    name="tipoBicicleta"
-                                    id="tipoBicicleta"
-                                >
-                                    <option value="Urbana">Urbana</option>
-                                    <option value="Montaña">Montaña</option>
-                                    <option value="Eléctrica">Eléctrica</option>
-                                </select>
-                            </p>
+                                            <input
+                                                title="Solo debe escribir números"
+                                                minlength="6"
+                                                maxlength="10"
+                                                pattern="\d*"
+                                                type="text"
+                                                id="documento"
+                                                name="documento"
+                                                class="form-control"
+                                            />
+                                        </div>
+                                    </div>
+                                </fieldset>
 
-                            <p>
-                                <label for="plan"> Plan </label>
+                                <!-- DATOS DEL ALQUILER -->
+                                <fieldset class="mb-4">
+                                    <legend class="mb-3">Tu alquiler</legend>
 
-                                <select required name="plan" id="plan">
-                                    <option value="1 hora">1 hora</option>
-                                    <option value="Medio día">Medio día</option>
-                                    <option value="Día completo">
-                                        Día completo
-                                    </option>
-                                </select>
-                            </p>
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="fechaAlquiler"
+                                                class="form-label"
+                                            >
+                                                Fecha de tu alquiler
+                                            </label>
 
-                            <p>
-                                <label for="recorridoGuiado">
-                                    Recorrido guiado
-                                </label>
+                                            <input
+                                                required
+                                                type="date"
+                                                name="fechaAlquiler"
+                                                id="fechaAlquiler"
+                                                min="2026-11-01"
+                                                max="2026-12-31"
+                                                class="form-control"
+                                            />
+                                        </div>
 
-                                <select
-                                    name="recorridoGuiado"
-                                    id="recorridoGuiado"
-                                >
-                                    <option value="Ninguno">Ninguno</option>
-                                    <option value="Río y parques">
-                                        Río y parques
-                                    </option>
-                                    <option value="Sabores de Barrio">
-                                        Sabores de Barrio
-                                    </option>
-                                    <option value="Reto La palma">
-                                        Reto La palma
-                                    </option>
-                                </select>
-                            </p>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="tipoBicicleta"
+                                                class="form-label"
+                                            >
+                                                Tipo de bicicleta
+                                            </label>
 
-                            <p>
-                                <label for="cantidadBicis">
-                                    Cantidad de bicicletas
-                                </label>
-                                <input
-                                    required
-                                    min="1"
-                                    max="6"
-                                    type="number"
-                                    name="cantidadBicis"
-                                    id="cantidadBicis"
-                                />
-                            </p>
+                                            <select
+                                                required
+                                                name="tipoBicicleta"
+                                                id="tipoBicicleta"
+                                                class="form-select"
+                                            >
+                                                <option value="Urbana">
+                                                    Urbana
+                                                </option>
+                                                <option value="Montaña">
+                                                    Montaña
+                                                </option>
+                                                <option value="Eléctrica">
+                                                    Eléctrica
+                                                </option>
+                                            </select>
+                                        </div>
 
-                            <p>
-                                <label for="comentarios"
-                                    >Comentarios extra</label
-                                >
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="plan"
+                                                class="form-label"
+                                            >
+                                                Plan
+                                            </label>
 
-                                <textarea
-                                    maxlength="300"
-                                    name="comentarios"
-                                    id="comentarios"
-                                    style="resize: vertical"
-                                ></textarea>
-                            </p>
-                        </fieldset>
+                                            <select
+                                                required
+                                                name="plan"
+                                                id="plan"
+                                                class="form-select"
+                                            >
+                                                <option value="1 hora">
+                                                    1 hora
+                                                </option>
+                                                <option value="Medio día">
+                                                    Medio día
+                                                </option>
+                                                <option value="Día completo">
+                                                    Día completo
+                                                </option>
+                                            </select>
+                                        </div>
 
-                        <fieldset>
-                            <legend>Confirmación</legend>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="recorridoGuiado"
+                                                class="form-label"
+                                            >
+                                                Recorrido guiado
+                                            </label>
 
-                            <p>
-                                <label for="politicas"
-                                    >¿Acepta las políticas del alquiler?</label
-                                >
-                                <input
-                                    required
-                                    type="checkbox"
-                                    name="politicas"
-                                    id="politicas"
-                                />
-                            </p>
-                        </fieldset>
+                                            <select
+                                                name="recorridoGuiado"
+                                                id="recorridoGuiado"
+                                                class="form-select"
+                                            >
+                                                <option value="Ninguno">
+                                                    Ninguno
+                                                </option>
+                                                <option value="Río y parques">
+                                                    Río y parques
+                                                </option>
+                                                <option
+                                                    value="Sabores de Barrio"
+                                                >
+                                                    Sabores de Barrio
+                                                </option>
+                                                <option value="Reto La palma">
+                                                    Reto La palma
+                                                </option>
+                                            </select>
+                                        </div>
 
-                        <button type="submit">Enviar formulario</button>
-                    </form>
+                                        <div class="col-12 col-md-6">
+                                            <label
+                                                for="cantidadBicis"
+                                                class="form-label"
+                                            >
+                                                Cantidad de bicicletas
+                                            </label>
+
+                                            <input
+                                                required
+                                                min="1"
+                                                max="6"
+                                                type="number"
+                                                name="cantidadBicis"
+                                                id="cantidadBicis"
+                                                class="form-control"
+                                            />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label
+                                                for="comentarios"
+                                                class="form-label"
+                                            >
+                                                Comentarios extra
+                                            </label>
+
+                                            <textarea
+                                                maxlength="300"
+                                                name="comentarios"
+                                                id="comentarios"
+                                                class="form-control"
+                                                style="resize: vertical"
+                                            ></textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <!-- CONFIRMACIÓN -->
+                                <fieldset class="mb-4">
+                                    <legend class="mb-3">Confirmación</legend>
+
+                                    <div class="form-check">
+                                        <input
+                                            required
+                                            type="checkbox"
+                                            name="politicas"
+                                            id="politicas"
+                                            class="form-check-input"
+                                        />
+
+                                        <label
+                                            for="politicas"
+                                            class="form-check-label"
+                                        >
+                                            ¿Acepta las políticas del alquiler?
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <button type="submit" class="btn btn-success">
+                                    Enviar formulario
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </section>
 
-                <section>
-                    <h1>Reserva ti Bicicleta ya mimo</h1>
+                <!-- INFORMACIÓN: 4 COLUMNAS -->
+                <section class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="mb-3">Reserva tu bicicleta ya mismo</h2>
 
-                    <p>
-                        Escríbenos a
-                        <a href="mailto:correosupercool@example.com"
-                            >este correo</a
-                        >.
-                    </p>
+                            <p>
+                                Escríbenos a
+                                <a href="mailto:correosupercool@example.com">
+                                    este correo </a
+                                >.
+                            </p>
 
-                    <h2>Horario</h2>
+                            <h3 class="mt-4">Horario</h3>
 
-                    <ul>
-                        <li>Lune: no ai serbisio</li>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Lunes: no hay servicio
+                                </li>
 
-                        <li>Marte: no ai serbisio</li>
+                                <li class="list-group-item">
+                                    Martes: no hay servicio
+                                </li>
 
-                        <li>Miercole: no ai serbisio</li>
+                                <li class="list-group-item">
+                                    Miércoles: no hay servicio
+                                </li>
 
-                        <li>Jueve: no ai serbisio</li>
+                                <li class="list-group-item">
+                                    Jueves: no hay servicio
+                                </li>
 
-                        <li>Vielne: no ai serbisio</li>
+                                <li class="list-group-item">
+                                    Viernes: no hay servicio
+                                </li>
 
-                        <li>savados: no ai serbisio</li>
+                                <li class="list-group-item">
+                                    Sábados: no hay servicio
+                                </li>
 
-                        <li>donimgo: servisio de 3:00 a.m. a 3:01 a.m.</li>
-                    </ul>
+                                <li class="list-group-item">
+                                    Domingo: servicio de 3:00 a.m. a 3:01 a.m.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
 
         <div imports="../use/footer.htm"></div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
