@@ -183,3 +183,27 @@ h6 {
 
     z-index: 3000;
 }
+
+/* Carrusel de promociones */
+#carouselPromociones {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#carouselPromociones .carousel-item img {
+    filter: brightness(65%);
+}
+
+#carouselPromociones .carousel-caption {
+    bottom: 20%;
+}
+
+#carouselPromociones .carousel-caption h3 {
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+    color: white;
+}
+
+#carouselPromociones .carousel-caption p {
+    color: white;
+}
